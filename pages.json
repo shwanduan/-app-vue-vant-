@@ -1,0 +1,354 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+	
+		// {
+		// 	"path": "pages/mine/changePassWord",
+		// 	"style": {
+		// 		"navigationStyle": "custom"
+		// 	}
+		// },
+		{
+			"path": "pages/mine/changePassWords",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/login/register",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/login/forget",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#1331df",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue609",
+							"fontSrc": "/static/shezhi.ttf",
+							"fontSize": "20px",
+							"float": "right",
+							"color": "#fff"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/order/order",
+			"style": {
+				"navigationBarBackgroundColor": "#1331df",
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "订单详情"
+				// "app-plus": {
+				// 	"titleNView": {
+				// 		"buttons": [{
+				// 			"text": "\ue63a",
+				// 			"fontSrc": "/static/kefu.ttf",
+				// 			"fontSize": "30px",
+				// 			"float": "right",
+				// 			"color": "#fff"
+				// 		}]
+				// 	}
+				// }
+			}
+		},
+		{
+			"path": "pages/mine/account",
+			"style": {
+				"navigationBarBackgroundColor": "#1331df",
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "账户"
+			}
+		},
+		{
+			"path": "pages/index/notice",
+			"style": {
+				"navigationBarBackgroundColor": "#1331df",
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "系统公告"
+			}
+		},
+		{
+			"path": "pages/index/noticeInfo",
+			"style": {
+				"navigationBarBackgroundColor": "#1331df",
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "公告详情"
+			}
+		},
+		{
+			"path": "pages/service/service",
+			"style": {
+				"navigationBarBackgroundColor": "#1331df",
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "客服"
+			}
+		},
+		{
+			"path": "pages/mine/sell",
+			"style": {
+				"navigationBarBackgroundColor": "#1331df",
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "卖币"
+			}
+		},
+		{
+			"path": "pages/mine/buy",
+			"style": {
+				"navigationBarBackgroundColor": "#1331df",
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "买币"
+			}
+		},
+		{
+			"path": "pages/mine/artificial",
+			"style": {
+				"navigationBarTitleText": "人工充值",
+				"navigationBarBackgroundColor": "#fff",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/mine/line",
+			"style": {
+				"navigationBarTitleText": "线路切换"
+			}
+		},
+		{
+			"path": "pages/index/flowDetails",
+			"style": {
+				"navigationBarTitleText": "流水明细"
+			}
+		},
+		{
+			"path": "pages/mine/invitation",
+			"style": {
+				"navigationBarTitleText": "邀请有奖",
+				"navigationBarBackgroundColor": "white",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/index/address",
+			"style": {
+				"navigationBarTitleText": "地区选择"
+			}
+		},
+		{
+			"path": "pages/mine/setting",
+			"style": {
+				"navigationBarTitleText": "设置"
+			}
+		},
+		{
+			"path": "pages/mine/code",
+			"style": {
+				"navigationBarTitleText": "收款码管理"
+			}
+		},
+		{
+			"path": "pages/mine/codeInfo",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/mine/addCode",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/mine/yhkInfo",
+			"style": {
+				"navigationBarTitleText": "银行卡"
+			}
+		},
+		{
+			"path": "pages/mine/addyhk",
+			"style": {
+				"navigationBarTitleText": "添加银行卡"
+			}
+		},
+		{
+			"path": "pages/mine/history",
+			"style": {
+				"navigationBarTitleText": "接单列表"
+			}
+		},
+		{
+			"path": "pages/mine/team",
+			"style": {
+				"navigationBarTitleText": "我的团队",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "新建",
+							"fontSrc": "/static/shezhi.ttf",
+							"fontSize": "14px",
+							"float": "right",
+							"color": "#fff"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/mine/subordinate",
+			"style": {
+				"navigationBarTitleText": "一级下级",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "新增",
+							"fontSize": "14px",
+							"float": "right",
+							"color": "#fff",
+							"width": "auto"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/mine/subordinateOne",
+			"style": {
+				"navigationBarTitleText": "二级下级"
+			}
+		},
+		{
+			"path": "pages/mine/subordinateTwo",
+			"style": {
+				"navigationBarTitleText": "三级下级"
+			}
+		},
+		{
+			"path": "pages/mine/accountInfo",
+			"style": {
+				"navigationBarTitleText": "记录详情"
+			}
+		},{
+			"path": "pages/mine/addSub",
+			"style": {
+				"navigationBarTitleText": "新增下级"
+			}
+		},
+		{
+			"path": "pages/mine/setSub",
+			"style": {
+				"navigationBarTitleText": "设置利率"
+			}
+		},
+		{
+			"path": "pages/mine/achievement",
+			"style": {
+				"navigationBarTitleText": "业绩报表"
+			}
+		},
+		{
+			"path": "pages/mine/achievementOne",
+			"style": {
+				"navigationBarTitleText": "业绩报表"
+			}
+		},
+		{
+			"path": "pages/mine/achievementTwo",
+			"style": {
+				"navigationBarTitleText": "业绩报表"
+			}
+		},
+		{
+			"path": "pages/mine/question",
+			"style": {
+				"navigationBarTitleText": "常见问题"
+			}
+		},
+		{
+			"path": "pages/mine/questionInfo",
+			"style": {
+				"navigationBarTitleText": "问题详情"
+			}
+		},
+		{
+			"path": "pages/index/paymentCode",
+			"style": {
+				"navigationBarTitleText": "收款方式",
+				"navigationBarBackgroundColor": "white",
+				"navigationBarTextStyle": "black"
+			}
+		}
+	    ,{
+            "path" : "pages/mine/transfer",
+            "style" : {
+				
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "转账记录",
+							"fontSize": "14px",
+							"float": "right",
+							"color": "#fff",
+							"width": "auto"
+						}],
+						 "searchInput": {
+							   
+						       "backgroundColor": "#efefef",
+						       "borderRadius": "6px", //输入框圆角
+						       "placeholder": "请输入搜索手机号",
+						       "disabled": false,
+							   "placeholderColor":"#ffffff"
+													 //disable时点击输入框不置焦，可以跳到新页面搜索
+						                         }
+					}
+				}
+				
+			}
+        }
+        ,{
+            "path" : "pages/mine/transferRecord",
+            "style" : {
+				"navigationBarTitleText":"转账"
+			}
+        }
+        ,{
+            "path" : "pages/mine/realltransferReoder",
+            "style" : {
+				"navigationBarTitleText":"转账记录"
+			}
+        }
+       
+        ,{
+            "path" : "pages/mine/goTochangpassword",
+            "style" : {}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "鑫支付",
+		"navigationBarBackgroundColor": "#1331df",
+		"backgroundColor": "#F8F8F8"
+	}
+}

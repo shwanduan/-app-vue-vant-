@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>客服</title>
+	</head>
+	<script type="text/javascript" src="https://js.cdn.aliyun.dcloud.net.cn/dev/uni-app/uni.webview.1.5.2.js"></script>
+	<script type="text/javascript">
+		//取url中的参数值
+		function getQuery(name) {
+			// 正则：[找寻'&' + 'url参数名字' = '值' + '&']（'&'可以不存在）
+			let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+			let r = window.location.search.substr(1).match(reg);
+			if (r != null) {
+				// 对参数值进行解码
+				return decodeURIComponent(r[2]);
+			}
+			return null;
+		}
+
+		/* 
+		 * url 目标url 
+		 * arg 需要替换的参数名称 
+		 * arg_val 替换后的参数的值 
+		 * return url 参数替换后的url 
+		 */
+		function changeURLArg(url, arg, arg_val) {
+			var pattern = arg + '=([^&]*)';
+			var replaceText = arg + '=' + arg_val;
+			if (url.match(pattern)) {
+				var tmp = '/(' + arg + '=)([^&]*)/gi';
+				tmp = url.replace(eval(tmp), replaceText);
+				return tmp;
+			} else {
+				if (url.match('[\?]')) {
+					return url + '&' + replaceText;
+				} else {
+					return url + '?' + replaceText;
+				}
+			}
+			return url + '\n' + arg + '\n' + arg_val;
+		}
+
+
+		(function(ji, a, x, i, n, c) {
+			ji[n] = ji[n] || function() {
+				(ji[n].n = ji[n].n || []).push(arguments);
+			};
+			j = a.createElement(x), s = a.getElementsByTagName(x)[0];
+			j.async = true;
+			if (typeof c === "function") {
+				if (typeof document.attachEvent !== "object") {
+					j.onload = function() {
+						c()
+					}
+				} else {
+					j.onreadystatechange = function() {
+						var r = j.readyState;
+						if (r === "loaded" || r === "complete") {
+							j.onreadystatechange = null;
+							c()
+						}
+					}
+				}
+			};
+			console.log('打开前:' + window.localStorage.getItem('types'))
+			if (window.localStorage.getItem('types') == 1) {
+				var auto = "&autoOpen=false";
+				window.localStorage.setItem("types", '0');
+				document.addEventListener('UniAppJSBridgeReady', function() {
+					uni.navigateBack({
+						delta: 1
+					});
+				});
+			} else {
+				// window.location.pathname = changeURLArg(window.location.pathname, 'type',0);
+				var auto = "&autoOpen=true";
+				window.localStorage.setItem("types", "1");
+			}
+			console.log('打开后:' + window.localStorage.getItem('types'))
+			j.charset = "UTF-8";
+			j.src = i + "?v=" + new Date().getUTCDate() + "&id=mxyybtzrdhvwzw&appName=test779&appChannel=20001" + auto;
+			s.parentNode.insertBefore(j, s);
+		})(window, document, "script", "https://web.jiaxincloud.com/mcs.js", "_JIAXIN", callback);
+		_JIAXIN();
+
+
+
+
+		// (function(ji, a, x, i, n, c) {
+		// 	ji[n] = ji[n] || function() {
+		// 		(ji[n].n = ji[n].n || []).push(arguments);
+		// 	};
+		// 	j = a.createElement(x), s = a.getElementsByTagName(x)[0];
+		// 	j.async = true;
+		// 	if (typeof c === "function") {
+		// 		if (typeof document.attachEvent !== "object") {
+		// 			j.onload = function() {
+		// 				c()
+		// 			}
+		// 		} else {
+		// 			j.onreadystatechange = function() {
+		// 				var r = j.readyState;
+		// 				if (r === "loaded" || r === "complete") {
+		// 					j.onreadystatechange = null;
+		// 					c()
+		// 				}
+		// 			}
+		// 		}
+		// 	};
+		// 	console.log('打开前:' + window.localStorage.getItem('type'))
+		// 	if (window.localStorage.getItem('type') == 1) {
+		// 		var auto = "&autoOpen=false";
+		// 		window.localStorage.setItem("type", "");
+		// 		document.addEventListener('UniAppJSBridgeReady', function() {
+		// 			uni.navigateBack({
+		// 				delta: 1
+		// 			});
+		// 		});
+		// 	} else {
+		// 		var auto = "&autoOpen=true";
+		// 		window.localStorage.setItem("type", "1");
+		// 	}
+		// 	console.log('打开后:' + window.localStorage.getItem('type'))
+		// 	j.charset = "UTF-8";
+		// 	j.src = i + "?v=" + new Date().getUTCDate() + "&id=eg50mtjxbdq1zw&appName=test779&appChannel=20001" + auto;
+		// 	s.parentNode.insertBefore(j, s);
+		// })(window, document, "script", "https://web.jiaxincloud.com/mcs.js", "_JIAXIN", callback);
+		// _JIAXIN();
+		// 业务逻辑
+		function callback() {
+			var json = {};
+			json.cid = getQuery('uid'); //这里传递客户的id，详情参见会话消息扩展
+			json.token = '';
+			json.setting = {
+				"windowHeight": 400,
+				"windowWidth": 570,
+				"hideMsgCenter": 1,
+				"hideCloseBtn": 1
+			};
+			json.session = {
+				"pageTitle": "测试客服",
+				"log": 0
+			};
+			json.crm = {
+				"name": getQuery('phone'),
+				"phone": getQuery('phone')
+			};
+			json.workgroup = {
+				"id": "service",
+				'name': '专属客服'
+			};
+			jiaxinInit(json);
+		}
+	</script>
+	<body>
+	</body>
+</html>
